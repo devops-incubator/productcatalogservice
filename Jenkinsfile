@@ -2,8 +2,8 @@ pipeline {
 
   environment {
     PROJECT = "srinag"
-    APP_NAME = "adservice"
-    FE_SVC_NAME = "${APP_NAME}-adservice"
+    APP_NAME = "product"
+    FE_SVC_NAME = "${APP_NAME}-product"
     CLUSTER = "hipstar"
     CLUSTER_ZONE = "us-central1-c"
     IMAGE_TAG = "gcr.io/${PROJECT}/${APP_NAME}"
@@ -30,7 +30,7 @@ spec:
     - cat
     tty: true
   - name: gcloud
-    image: gcr.io/google.com/cloudsdktool/cloud-sdk
+    image: gcr.io/stackdriver-sandbox-230822/sandbox/productcatalogservice:v0.7.6
     command:
     - cat
     tty: true
@@ -64,7 +64,7 @@ spec:
         container('kubectl') {
           
           sh "gcloud container clusters get-credentials hipstar --zone us-central1-c --project srinag"
-          sh "kubectl apply -f adservice.yaml"
+          sh "kubectl apply -f productcatalogservice.yaml"
         }
       }
     }
