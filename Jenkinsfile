@@ -30,7 +30,7 @@ spec:
     - cat
     tty: true
   - name: gcloud
-    image: gcr.io/stackdriver-sandbox-230822/sandbox/productcatalogservice:v0.7.6
+    image: gcr.io/google.com/cloudsdktool/cloud-sdk
     command:
     - cat
     tty: true
