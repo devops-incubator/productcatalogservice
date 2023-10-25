@@ -1,7 +1,7 @@
 pipeline {
 
   environment {
-    PROJECT = "shaped-producer-355514"
+    PROJECT = "intrepid-league-397203"
     APP_NAME = "product"
     FE_SVC_NAME = "${APP_NAME}-product"
     CLUSTER = "cluster-1"
